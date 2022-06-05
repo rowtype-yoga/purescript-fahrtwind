@@ -14,12 +14,9 @@ to generate this file without the comments in this block.
 , dependencies =
   [ "arrays"
   , "colors"
-  , "console"
-  , "effect"
   , "foreign-object"
   , "integers"
   , "prelude"
-  , "psci-support"
   , "react-basic"
   , "react-basic-dom"
   , "react-basic-emotion"
