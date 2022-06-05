@@ -1,0 +1,25 @@
+* PureScript Fahrtwind
+
+#+CAPTION: A nice picture of somebody's hair blowing in Fahrtwind
+#+NAME: fig:fahrtwind
+[[./docs/img/fahrtwind.jpg]]
+
+A library that leverages `react-basic-emotion` to provide a lot of functionality from [https://tailwindcss.com/][tailwind].
+
+** Example
+#+BEGIN_SRC purescript
+  module Example where
+
+  import Fahrtwind
+  import React.Basic.Emotion as Emotion
+  import React.Basic.DOM (a', text)
+  -- more imports
+
+  anchor href caption = Emotion.element a'
+    { className: "my-anchor"
+    , href
+    , children: [text caption]
+    , css: textCol blue._500
+        <> hover textDecorationUnderline
+    }
+#+END_SRC
