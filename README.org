@@ -4,7 +4,7 @@
 #+NAME: fig:fahrtwind
 [[./docs/img/fahrtwind.jpg]]
 
-A library that leverages `react-basic-emotion` to provide a lot of functionality from [[https://tailwindcss.com/][tailwind]].
+A library that leverages [[https://github.com/lumihq/purescript-react-basic-emotion][react-basic-emotion]] to provide a lot of functionality from [[https://tailwindcss.com/][tailwind]].
 
 ** Example
 #+BEGIN_SRC purescript
