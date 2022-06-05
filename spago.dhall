@@ -11,6 +11,8 @@ When creating a new Spago project, you can use
 to generate this file without the comments in this block.
 -}
 { name = "fahrtwind"
+, repository = "https://github.com/rowtype-yoga/purescript-fahrtwind.git"
+, license = "MIT"
 , dependencies =
   [ "arrays"
   , "colors"
