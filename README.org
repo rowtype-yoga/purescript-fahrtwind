@@ -13,13 +13,13 @@ A library that leverages `react-basic-emotion` to provide a lot of functionality
   import Fahrtwind
   import React.Basic.Emotion as Emotion
   import React.Basic.DOM (a', text)
-  -- more imports
+  import Fahrtwind.Icon.Heroicons as Heroicon
 
   anchor href caption = Emotion.element a'
     { className: "my-anchor"
-    , href
-    , children: [text caption]
     , css: textCol blue._500
         <> hover textDecorationUnderline
+    , href
+    , children: [ text caption, Heroicon.externalLink ]
     }
 #+END_SRC
