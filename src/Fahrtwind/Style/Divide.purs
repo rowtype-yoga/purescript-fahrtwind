@@ -3,12 +3,13 @@ module Fahrtwind.Style.Divide
   , divideXReverse
   , divideY
   , divideYReverse
+  , divideCol'
   , divideCol
   ) where
 
 import Prelude
 import Color (Color)
-import React.Basic.Emotion (Style, color, css, nested, px, solid)
+import React.Basic.Emotion (Style, StyleProperty, color, css, nested, px, solid)
 
 nestChildren ∷ Style → Style
 nestChildren inner = css { "& > * + *": nested inner }
@@ -47,8 +48,8 @@ divideY pixels =
 divideYReverse ∷ Int → Style
 divideYReverse = negate >>> divideY
 
+divideCol' ∷ StyleProperty → Style
+divideCol' borderColor = nestChildren $ css { borderColor }
+
 divideCol ∷ Color → Style
-divideCol col =
-  nestChildren
-    $ css
-        { borderColor: color col }
+divideCol = divideCol' <<< color
