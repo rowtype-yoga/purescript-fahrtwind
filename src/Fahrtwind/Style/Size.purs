@@ -46,7 +46,7 @@ minHeight ∷ Int → Style
 minHeight = px >>> minHeight'
 
 maxHeight' ∷ StyleProperty → Style
-maxHeight' = css <<< { minHeight: _ }
+maxHeight' = css <<< { maxHeight: _ }
 
 maxHeight ∷ Int → Style
 maxHeight = px >>> maxHeight'
