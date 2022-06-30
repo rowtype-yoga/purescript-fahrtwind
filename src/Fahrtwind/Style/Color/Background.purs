@@ -86,20 +86,20 @@ linearGradientString deg colors = bg
 blurredBackground ∷ Color → Int → Style
 blurredBackground col blurRadius =
   blurredBackground'
-    { blurredCol: col # withAlpha 0.3
-    , fallbackCol: col # withAlpha 0.8
+    { blurredCol: col # withAlpha 0.3 # cssStringRGBA
+    , fallbackCol: col # withAlpha 0.8 # cssStringRGBA
     , blurRadius
     }
 
 blurredBackground' ∷
-  { blurredCol ∷ Color, fallbackCol ∷ Color, blurRadius ∷ Int } → Style
+  { blurredCol ∷ String, fallbackCol ∷ String, blurRadius ∷ Int } → Style
 blurredBackground' { blurredCol, fallbackCol, blurRadius } =
   css
-    { background: str $ cssStringRGBA fallbackCol
+    { background: str $ fallbackCol
     , "@supports (backdrop-filter: blur(12px)) or (-webkit-backdrop-filter: blur(12px))":
         nested
           $ css
-              { background: str $ cssStringRGBA blurredCol
+              { background: str $ blurredCol
               , backdropFilter: str $ "blur(" <> show blurRadius <> "px)"
               }
     }
