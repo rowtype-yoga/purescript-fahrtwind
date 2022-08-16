@@ -24,8 +24,20 @@ backgroundImage' ∷ StyleProperty → Style
 backgroundImage' = css <<< { backgroundImage: _ }
 
 svgBackgroundImage ∷ JSX → Style
-svgBackgroundImage jsx = backgroundImage
-  $ "url('data:image/svg+xml;utf8,"
+svgBackgroundImage = backgroundImage <<< embeddedJSX
+
+maskImage :: String -> Style
+maskImage = maskImage' <<< str
+
+maskImage' :: StyleProperty -> Style
+maskImage' = css <<< { maskImage: _ }
+
+svgMaskImage ∷ JSX → Style
+svgMaskImage = maskImage <<< embeddedJSX
+
+embeddedJSX ∷ JSX → String
+embeddedJSX jsx =
+  "url('data:image/svg+xml;utf8,"
       <> renderToStaticMarkup jsx
       <> "')"
 
