@@ -1,4 +1,4 @@
-module Fahrtwind.Style.ScollBar where
+module Fahrtwind.Style.ScrollBar where
 
 import Prelude
 
