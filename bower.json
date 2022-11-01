@@ -1,0 +1,29 @@
+{
+    "name": "purescript-fahrtwind",
+    "license": [
+        "MIT"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/rowtype-yoga/purescript-fahrtwind.git"
+    },
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "output"
+    ],
+    "dependencies": {
+        "purescript-arrays": "^v7.1.0",
+        "purescript-colors": "^v7.0.1",
+        "purescript-foreign-object": "^v4.1.0",
+        "purescript-integers": "^v6.0.0",
+        "purescript-prelude": "^v6.0.1",
+        "purescript-react-basic": "^v17.0.0",
+        "purescript-react-basic-dom": "https://github.com/lumihq/purescript-react-basic-dom.git#v6.0.0",
+        "purescript-react-basic-emotion": "https://github.com/working-group-purescript-es/purescript-react-basic-emotion.git#es-modules",
+        "purescript-tuples": "^v7.0.0",
+        "purescript-typelevel-prelude": "^v7.0.0",
+        "purescript-unsafe-coerce": "^v6.0.0"
+    }
+}
