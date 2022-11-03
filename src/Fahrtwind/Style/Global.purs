@@ -2,7 +2,7 @@ module Fahrtwind.Style.Global where
 
 import Prelude
 
-import Color (cssStringRGBA, darken)
+import Color (darken)
 import Data.Array (intercalate)
 import Fahrtwind.Style.Color.Tailwind (gray, violet, white)
 import Prim.RowList (class RowToList)
