@@ -2,7 +2,8 @@ module Fahrtwind.Style.Text where
 
 import Prelude
 
-import React.Basic.Emotion (Style, StyleProperty, css, em, int, px, rem, str)
+import Data.Array (intercalate)
+import React.Basic.Emotion (Style, StyleProperty, css, em, int, none, px, rem, str)
 
 textSized ∷ Number → Number → Style
 textSized fs lh = css { fontSize: fs # rem, lineHeight: lh # rem }
@@ -123,6 +124,24 @@ fontFamilyOrMono ff = css { fontFamily: str $ ff <> ", monospace" }
 
 underline ∷ Style
 underline = css { textDecoration: str "underline" }
+
+noTextDecoration ∷ Style
+noTextDecoration = css { textDecoration: none }
+
+italic ∷ Style
+italic = css { fontStyle: str "italic" }
+
+textLinearGradient :: Int -> Array String -> Style
+textLinearGradient deg colours =
+  css
+    { backgroundClip: str "text"
+    , textFillColor: str "transparent"
+    , background: str bg
+    }
+  where
+  bg = "linear-gradient(" <> show deg <> "deg, "
+    <> intercalate "," (colours)
+    <> ")"
 
 textTransformUppercase ∷ Style
 textTransformUppercase = css { textTransform: str "uppercase" }
