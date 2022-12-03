@@ -63,7 +63,10 @@ backgroundSize ∷ String → Style
 backgroundSize = backgroundSize' <<< str
 
 linearGradient' :: Int -> Array String -> Style
-linearGradient' deg colours = css { background: str bg }
+linearGradient' deg colours = css { background: str (linearGradientString' deg colours) }
+
+linearGradientString' :: Int -> Array String -> String
+linearGradientString' deg colours = bg
   where
   bg = "linear-gradient(" <> show deg <> "deg, "
     <> intercalate "," (colours)

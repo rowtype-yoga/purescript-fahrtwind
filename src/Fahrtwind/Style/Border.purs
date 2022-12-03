@@ -4,7 +4,6 @@ import Prelude
 
 import Color (Color)
 import React.Basic.Emotion (Style, StyleProperty, borderBox, color, contentBox, css, px, rem, str)
-import Unsafe.Coerce (unsafeCoerce)
 
 rounded ∷ StyleProperty -> Style
 rounded = css <<< { borderRadius: _ }
@@ -69,10 +68,11 @@ boxSizingBorderBox = css { boxSizing: borderBox }
 boxSizingContentBox ∷ Style
 boxSizingContentBox = css { boxSizing: contentBox }
 
-borderGradient :: { backgroundGradient :: Style, borderGradient :: Style } -> Style
+borderGradient :: { backgroundGradient :: String, borderGradient :: String } -> Style
 borderGradient args =
   css
     { background: str $
-        unsafeCoerce args.backgroundGradient <> " padding-box, " <> unsafeCoerce args.borderGradient <> " border-box"
+        args.backgroundGradient <> " padding-box, "
+          <> (args.borderGradient <> " border-box")
     , borderColor: str "transparent"
     }
