@@ -134,9 +134,9 @@ italic = css { fontStyle: str "italic" }
 textLinearGradient :: Int -> Array String -> Style
 textLinearGradient deg colours =
   css
-    { backgroundClip: str "text"
+    { background: str bg
+    , backgroundClip: str "text"
     , textFillColor: str "transparent"
-    , background: str bg
     }
   where
   bg = "linear-gradient(" <> show deg <> "deg, "
