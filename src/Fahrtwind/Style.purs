@@ -36,7 +36,7 @@ module Fahrtwind.Style
 
 import Fahrtwind.Style.BlendMode (backgroundBlendMode, mixBlendMode)
 import Fahrtwind.Style.BlendMode.Types (BlendMode(..), blendModeToStyleProperty)
-import Fahrtwind.Style.Border (border, borderBottom, borderCol, borderCol', borderLeft, borderNone, borderRight, borderSolid, borderTop, boxSizingBorderBox, boxSizingContentBox, rounded, rounded2xl, rounded3xl, roundedDefault, roundedFull, roundedLg, roundedMd, roundedNone, roundedSm, roundedXl)
+import Fahrtwind.Style.Border (border, borderBottom, borderCol, borderCol', borderLeft, borderNone, borderRight, borderSolid, borderTop, boxSizingBorderBox, boxSizingContentBox, rounded, rounded2xl, rounded3xl, roundedDefault, roundedFull, roundedLg, roundedMd, roundedNone, roundedSm, roundedXl, borderGradient)
 import Fahrtwind.Style.BoxModel (m', mB, mB', mL, mL', mR, mR', mT, mT', mX, mX', mXAuto, mXY, mY, mY', p', pB, pB', pL, pL', pR, pR', pT, pT', pX, pX', pXY, pY, pY')
 import Fahrtwind.Style.BoxShadow (mkShadow, shadow, shadow', shadowDefault, shadowDefaultCol, shadowLg, shadowLgCol, shadowMd, shadowMdCol, shadowSm, shadowSmCol, shadowXl, shadowXlCol, shadowXxl, shadowXxlCol, shadows)
 import Fahrtwind.Style.Breakpoint (screen2xl, screenLg, screenMd, screenSm, screenXl)
