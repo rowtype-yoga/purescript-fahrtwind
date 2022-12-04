@@ -48,7 +48,7 @@ import Fahrtwind.Style.Cursor (cursorAuto, cursorDefault, cursorHelp, cursorMove
 import Fahrtwind.Style.Display (block, displayNone, flex, inlineBlock, inlineFlex, inlineGrid)
 import Fahrtwind.Style.Display.Flex (alignSelfCenter, alignSelfEnd, alignSelfStart, flexCol, flexGrow, flexNoWrap, flexRow, flexShrink, flexWrap, flexWrapReverse, gap, itemsAround, itemsBetween, itemsCenter, itemsEnd, itemsEvenly, itemsStart, justifyAround, justifyBetween, justifyCenter, justifyEnd, justifyEvenly, justifySelfCenter, justifySelfEnd, justifySelfStart, justifyStart)
 import Fahrtwind.Style.Display.Grid (displayGrid, templateCols, templateRows)
-import Fahrtwind.Style.Divide (divideCol, divideX, divideXReverse, divideY, divideYReverse)
+import Fahrtwind.Style.Divide (divideCol, divideCol', divideX, divideXReverse, divideY, divideYReverse)
 import Fahrtwind.Style.Global (globalStyles, nest, variables)
 import Fahrtwind.Style.Input (outlineNone, placeholder)
 import Fahrtwind.Style.Inset (bottom, bottom', left, left', right, right', top, top')
