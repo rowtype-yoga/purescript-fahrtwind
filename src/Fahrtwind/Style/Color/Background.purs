@@ -38,8 +38,8 @@ svgMaskImage = maskImage <<< embeddedJSX
 embeddedJSX ∷ JSX → String
 embeddedJSX jsx =
   "url('data:image/svg+xml;utf8,"
-      <> renderToStaticMarkup jsx
-      <> "')"
+    <> renderToStaticMarkup jsx
+    <> "')"
 
 backgroundPosition ∷ String → Style
 backgroundPosition bp = css { backgroundPosition: str bp }
@@ -61,6 +61,16 @@ backgroundSize' = css <<< { backgroundSize: _ }
 
 backgroundSize ∷ String → Style
 backgroundSize = backgroundSize' <<< str
+
+linearGradient' :: Int -> Array String -> Style
+linearGradient' deg colours = css { background: str (linearGradientString' deg colours) }
+
+linearGradientString' :: Int -> Array String -> String
+linearGradientString' deg colours = bg
+  where
+  bg = "linear-gradient(" <> show deg <> "deg, "
+    <> intercalate "," (colours)
+    <> ")"
 
 linearGradient ∷ Int → Array Color → Style
 linearGradient deg colors = css { background: str bg }
@@ -103,8 +113,8 @@ blurredBackground col blurRadius =
     , blurRadius
     }
 
-blurredBackground' ∷
-  { blurredCol ∷ String, fallbackCol ∷ String, blurRadius ∷ Int } → Style
+blurredBackground'
+  ∷ { blurredCol ∷ String, fallbackCol ∷ String, blurRadius ∷ Int } → Style
 blurredBackground' { blurredCol, fallbackCol, blurRadius } =
   css
     { background: str $ fallbackCol

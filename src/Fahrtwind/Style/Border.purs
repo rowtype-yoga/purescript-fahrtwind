@@ -1,6 +1,7 @@
 module Fahrtwind.Style.Border where
 
 import Prelude
+
 import Color (Color)
 import React.Basic.Emotion (Style, StyleProperty, borderBox, color, contentBox, css, px, rem, str)
 
@@ -66,3 +67,12 @@ boxSizingBorderBox = css { boxSizing: borderBox }
 
 boxSizingContentBox ∷ Style
 boxSizingContentBox = css { boxSizing: contentBox }
+
+borderGradient :: { backgroundGradient :: String, borderGradient :: String } -> Style
+borderGradient args =
+  css
+    { background: str $
+        args.backgroundGradient <> " padding-box, "
+          <> (args.borderGradient <> " border-box")
+    , borderColor: str "transparent"
+    }
